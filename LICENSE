@@ -1,0 +1,261 @@
+﻿CERN Open Hardware Licence Version 2 - Strongly Reciprocal
+
+CERN-OHL-S v2
+
+Copyright CERN 2020.
+
+This Source describes Open Hardware and is licensed under the CERN-OHL-S v2.
+
+You may redistribute and modify this Source and make products using it under
+the terms of the CERN-OHL-S v2 (https://ohwr.org/cern_ohl_s_v2.txt).
+
+This Source is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING
+OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.
+Please see the CERN-OHL-S v2 for applicable conditions.
+
+Source location: (provide the URL or path to the source repository)
+
+As per CERN-OHL-S v2 section 4, should You produce hardware based on this
+Source, You must where practicable maintain the Source Location visible on the
+external case of the Covered Source or product or its packaging.
+
+-----
+
+                  CERN Open Hardware Licence Version 2 - Strongly Reciprocal
+
+Preamble
+
+CERN has developed this licence to promote collaboration among hardware
+designers and to provide a legal tool which supports the
+freedom to use, study, modify, share and distribute hardware designs and
+products based on those designs. Version 2 of the CERN Open Hardware Licence
+comes in three variants: CERN-OHL-P (permissive); and two reciprocal
+licences: CERN-OHL-W (weakly reciprocal) and this licence, CERN-OHL-S
+(strongly reciprocal).
+
+The reciprocal variants are designed to be compatible with one another and
+with other reciprocal licences whilst imposing conditions to ensure that the
+original source may be shared widely. This is achieved through a mechanism
+which ensures that all modifications and derivatives of the original source
+are made available under the same licence.
+
+CERN-OHL-S is the most restrictive of the three variants. Under CERN-OHL-S,
+if You make modifications to the source files (for example, KiCad schematic
+or layout files) and distribute or make products using those modifications,
+You must make those modified source files available under CERN-OHL-S.
+
+Definitions
+
+1.1 'Licence' means this CERN-OHL-S.
+
+1.2 'Compatible Licence' means
+
+     a) any earlier version of the CERN Open Hardware licence, or
+
+     b) any version of the CERN-OHL-S or the CERN-OHL-W or,
+
+     c) any licence which permits You to treat the Source to which it applies
+        as licenced under CERN-OHL-S provided that on each occasion You must
+        also comply with the conditions in this Licence.
+
+1.3 'Source' means information such as design materials or digital code which
+    can be applied to Make or test a Product or to prepare a Product for use,
+    distribution or sale, regardless of its medium or how it is expressed. It
+    may include Notices.
+
+1.4 'Covered Source' means Source that is explicitly made available under
+    this Licence.
+
+1.5 'Product' means any device, component, work or physical object, whether
+    in finished or intermediate form, arising from the use, application or
+    processing of Covered Source.
+
+1.6 'Make' means to create or configure something, whether by manufacture,
+    assembly, compiling, loading or applying Covered Source or another Product
+    or otherwise.
+
+1.7 'Available Component' means any part, sub-assembly, library or code which:
+
+     a) is licensed under terms that do not impose reciprocal licensing
+        obligations on the Covered Source under which it is included; or
+
+     b) is a standard part, tool, library or code, which is widely available
+        and which is neither specific nor unique to the Covered Source in which
+        it is incorporated.
+
+1.8 'External Material' means anything (including Source) which:
+
+     a) is only combined with Covered Source in a way that interfaces with
+        it using a documented interface specification; and
+
+     b) is not a derivative of or does not include Covered Source, or, if it
+        does, it is solely to the extent necessary to facilitate such
+        interfacing.
+
+1.9 'Notices' means copyright, acknowledgement and trademark notices,
+    references to the location of any Notices, modification logs and all
+    notices that refer to this Licence and to the disclaimer of warranties
+    that are included in the Covered Source.
+
+1.10 'Licensee' or 'You' means any person exercising rights under this
+     Licence.
+
+1.11 'Licensor' means any person who creates or modifies Covered Source. A
+     person may be a Licensee and a Licensor at the same time.
+
+1.12 'Revision' means any modification to Covered Source resulting in a new
+     version of it with a version number or date different from the previous.
+
+1.13 'Source Location' means a location where a Licensor has placed Covered
+     Source, and which that Licensor reasonably believes will remain easily
+     accessible for at least three years for anyone to obtain a digital copy.
+
+1.14 'Notice' means a written communication in the form of a notice,
+     acknowledgement, disclaimer or legend placed in the documentation or
+     on a physical product.
+
+Applicability
+
+This Licence governs the use, copying, modification, distribution of Covered
+Source (including the compiled, mapped or object form of a Source and any
+modifications of it), and the Making of Products. By exercising any right
+granted under this Licence, You irrevocably accept these terms and conditions.
+
+This Licence is granted by the Licensor directly to You, and shall apply
+worldwide and without limitation in time.
+
+You agree that hardware is inherently different from software in that a
+design file may be easily reproducible but its reproduction in physical form,
+without changes, is not always possible. This Licence recognises that what
+is important is not the physical form of a Product, but the design that
+allows it to be Made.
+
+Conditions
+
+3.1 - Notices
+
+You must ensure that every copy of the Covered Source You distribute is
+accompanied by a copy of the Notices associated with that version of the
+Covered Source. You must also ensure that the Covered Source Location is
+included in the Notices where practicable.
+
+If You create a Revision and make it available, You must add a Revision
+Notice to the Notices.
+
+3.2 - Applying the Licence to Your Covered Source
+
+You may not impose any further restrictions on the exercise of the rights
+granted or affirmed under this Licence. Licences granted to anyone under
+this Licence shall not impose any conditions additional to those in this
+Licence. You are not required to accept this Licence in order to receive or
+run a copy of the Covered Source.
+
+However, by exercising any of the rights granted under this Licence to
+receive, copy, modify or distribute a copy of the Covered Source or to Make
+a Product, You indicate your acceptance of this Licence and all its terms and
+conditions.
+
+3.3 - Reciprocal licensing conditions for Covered Source
+
+If You distribute Covered Source (including in compiled, object or other
+form), You must:
+
+     a) retain all Notices;
+
+     b) include a copy of this Licence with the Covered Source; and
+
+     c) make the Covered Source (including any modifications You have made to
+        it, in accordance with section 3.4) available under this Licence,
+        including by providing its Source Location.
+
+3.4 - Reciprocal licensing conditions for Products
+
+If You Make a Product which in whole or in part is based on Covered Source,
+You must ensure that anyone who receives the Product can exercise the rights
+granted by this Licence with respect to the Covered Source incorporated in
+the Product, including but not limited to the right to obtain a copy of
+that Covered Source, by either:
+
+     a) including a copy of the Covered Source, and the Notices (if any),
+        with the Product, or accompanying materials provided with the Product;
+        or
+
+     b) providing the Source Location of the Covered Source, and the Notices
+        (if any), in the Product documentation or on the labelling of the
+        Product, or on a website or other means of access, such that anyone
+        acquiring the Product can readily obtain a copy of the Covered Source.
+
+3.5 - Notices and Source Location
+
+The Source Location must be included in any Notices required under section
+3.1 and on any label, documentation, or packaging provided with the Product.
+Where you place Notices on the Product, Source Location must be clearly
+legible and in a form that can reasonably be expected to be read by a person
+acquiring the Product.
+
+3.6 - Compiled Source and Object code
+
+Where Covered Source is not supplied in a form normally used for making
+modifications, You must also make it available in a form normally used for
+making modifications (for example, the KiCad schematic and PCB layout files).
+
+Warranties and Liability
+
+4.1 - DISCLAIMER OF WARRANTIES
+
+COVERED SOURCE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY,
+SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+OF THIRD PARTY INTELLECTUAL PROPERTY RIGHTS ARE DISCLAIMED. IN NO EVENT
+SHALL ANY LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS COVERED SOURCE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+4.2 - Liability
+
+Nothing in this Licence shall exclude or limit liability for:
+
+     a) death or personal injury caused by gross negligence or wilful
+        misconduct;
+
+     b) fraud or fraudulent misrepresentation;
+
+     c) any other liability that cannot be excluded or limited by applicable
+        law.
+
+5.  Termination
+
+5.1 If You breach any of the terms of this Licence, Your rights under this
+    Licence will terminate automatically and immediately. Any licences You
+    have granted to others will, however, remain valid for as long as those
+    persons comply with the terms of those licences.
+
+5.2 You may terminate this Licence for any version of the Covered Source by
+    notifying the Licensor (or its successors), but only if:
+
+     a) You have no obligation to provide the Covered Source of that version
+        to anyone at the time of termination; and
+
+     b) the Licensor agrees in writing to the termination.
+
+Licence Compatibility
+
+If You receive Covered Source under a Compatible Licence, You may, at Your
+option, treat the Covered Source as being made available under this Licence.
+For the avoidance of doubt, the fact that another licence is listed as
+Compatible with this Licence does not mean that this Licence is compatible
+with that other licence.
+
+Notice
+
+CERN-OHL-S v2 2020 CERN. This Licence is based on the CERN Open Hardware
+Licence (OHL) first published by CERN in 2011. The intent of the CERN Open
+Hardware Licence is to facilitate dissemination of designs and products based
+on those designs.
+
+For more information, contact: hardware-licensing@cern.ch
+or visit: https://ohwr.org/cern_ohl_s_v2.txt
