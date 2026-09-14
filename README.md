@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
   <img src="Images/3dboard view-ai generated.jpeg" width="100%" alt="Unipolar Stepper Motor Driver PCB — AI-Generated 3D Render"/>
 </div>
 
@@ -166,19 +166,19 @@ The following renders were exported from KiCad 8.0's integrated 3D viewer using 
   <tbody>
     <tr>
       <td align="center">
+        <img src="Images/3d view 1.png" width="300" alt="3D View — Perspective with Heatsinks"/>
+        <br/>
+        <sub><b>Figure 4.</b> Perspective view demonstrating the physical clearance and orientation of the components, specifically highlighting the aluminum heatsinks mounted on the TIP120 power transistors for thermal management.</sub>
+      </td>
+      <td align="center">
         <img src="Images/3d view.png" width="300" alt="3D View — Front Isometric"/>
         <br/>
-        <sub><b>Figure 4.</b> Front isometric view. Component placement, silk screen annotation, and TIP120 TO-220 package orientation are clearly visible.</sub>
+        <sub><b>Figure 5.</b> Front isometric view illustrating the spatial separation between the logic control section (ICs) and the bare TO-220 power transistor array.</sub>
       </td>
       <td align="center">
-        <img src="Images/3d view 1.png" width="300" alt="3D View — Top Down"/>
+        <img src="Images/3d view 2.png" width="300" alt="3D View — Top-Down Orthographic"/>
         <br/>
-        <sub><b>Figure 5.</b> Top-down view. Illustrates the spatial separation between the logic ICs (left cluster) and the power transistor array (right cluster).</sub>
-      </td>
-      <td align="center">
-        <img src="Images/3d view 2.png" width="300" alt="3D View — Perspective"/>
-        <br/>
-        <sub><b>Figure 6.</b> Perspective view. Demonstrates board height profile, dominated by the electrolytic capacitor and TIP120 transistors in TO-220 packages.</sub>
+        <sub><b>Figure 6.</b> Top-down orthographic view showing exact component placement, silkscreen annotations, and the underlying top-layer copper routing.</sub>
       </td>
     </tr>
   </tbody>
