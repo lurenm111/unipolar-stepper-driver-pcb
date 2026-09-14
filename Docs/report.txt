@@ -1,0 +1,13 @@
+Info: X scale constrained.
+Info: Y scale constrained.
+Plotted to 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-F_Cu.gbr'.
+Plotted to 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-B_Cu.gbr'.
+Plotted to 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-F_Paste.gbr'.
+Plotted to 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-B_Paste.gbr'.
+Plotted to 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-F_Silkscreen.gbr'.
+Plotted to 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-B_Silkscreen.gbr'.
+Plotted to 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-F_Mask.gbr'.
+Plotted to 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-B_Mask.gbr'.
+Plotted to 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-Edge_Cuts.gbr'.
+Created Gerber job file 'C:\Users\SAM\Documents\Stepper_Motor_Driver\Stepper_Motor_Driver-job.gbrjob'.
+Info: Done.
