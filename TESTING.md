@@ -60,7 +60,7 @@ Examine the board under magnification for the following defects:
 |---|---|
 | Solder joints | All through-hole pads have concave, shiny fillets; no cold joints, no solder bridges |
 | Component polarity | **D1**–**D4** (1N4001) cathode bands face the `VMOT` side; electrolytic capacitors (if any) positive leads match silkscreen |
-| IC orientation | Pin 1 of **U1** (NE555), **U2** (74LS194), **U3** (7407) aligns with the silkscreen notch or dot |
+| IC orientation | Pin 1 of **U1** (NE555), **U4** (74LS194), **U2** (7407) aligns with the silkscreen notch or dot |
 | **TIP120** placement | **Q1**–**Q4** metal tabs face the designated heatsink area; no pins bent under the package |
 | Foreign debris | No solder balls, clipped leads, or flux residue bridging adjacent pads |
 | Board outline | No cracks or delamination near the board edge or mounting holes |
@@ -71,7 +71,7 @@ With all ICs removed from their sockets (if socketed) or before first power-up, 
 
 | Test Point 1 | Test Point 2 | Expected Resistance |
 |---|---|---|
-| `VCC` net (**U1** pin 14, **U2** pin 16, **U3** pin 14) | `GND` | > 1 MΩ (no short) |
+| `VCC` net (**U1** pin 8, **U4** pin 16, **U2** pin 14) | `GND` | > 1 MΩ (no short) |
 | `VMOT` net (motor connector pin, **Q1**–**Q4** collectors) | `GND` | > 1 MΩ (no short) |
 | `VCC` | `VMOT` | > 1 MΩ (rails isolated) |
 | Each motor winding output (**Q1**–**Q4** emitters to connector) | `GND` | > 1 MΩ (no output short) |
@@ -94,9 +94,9 @@ With all ICs removed from their sockets (if socketed) or before first power-up, 
 | Parameter | Acceptance Criterion |
 |---|---|
 | Supply current | < 50 mA (quiescent current of three ICs + pull-up resistors) |
-| `VCC` voltage at **U1** pin 14 | 4.75 V – 5.25 V (TTL Vcc minimum) |
-| `VCC` voltage at **U2** pin 16 | 4.75 V – 5.25 V |
-| `VCC` voltage at **U3** pin 14 | 4.75 V – 5.25 V |
+| `VCC` voltage at **U1** pin 8 | 4.75 V – 5.25 V (NE555 Vcc) |
+| `VCC` voltage at **U4** pin 16 | 4.75 V – 5.25 V (74LS194 Vcc) |
+| `VCC` voltage at **U2** pin 14 | 4.75 V – 5.25 V (7407 Vcc) |
 | Decoupling capacitor voltage (100 nF at each IC) | Matches `VCC` within 50 mV |
 
 ### 4.2 VMOT Rail Check (No Load)
@@ -156,12 +156,12 @@ Connect Channel 2 to **U1** pin 6/2 (THRESHOLD/TRIGGER, tied together in astable
 
 ### 6.1 Power-Up Default State
 
-1. With the NE555 clock running (verified in Stage 3), observe the four parallel outputs of **U2** (pins 15 = QA, 1 = QB, 10 = QC, 9 = QD) using a logic probe or oscilloscope.
+1. With the NE555 clock running (verified in Stage 3), observe the four parallel outputs of **U4** (pins 12 = QA, 11 = QB, 10 = QC, 9 = QD) using a logic probe or oscilloscope.
 
 | Condition | Expected Behavior |
 |---|---|
 | Power-up (S0 = HIGH, S1 = LOW for right-shift mode) | One output HIGH, cycling through QA → QB → QC → QD → QA |
-| Clock present at pin 11 | Outputs advance on each rising clock edge |
+| Clock present at pin 15 | Outputs advance on each rising clock edge |
 | DIR jumper set to reverse (S0 = LOW, S1 = HIGH) | Sequence reverses: QA → QD → QC → QB → QA |
 | Both S0 and S1 HIGH (parallel load mode) | Outputs load the values on pins 3–6 (A–D) on next clock |
 
@@ -171,16 +171,16 @@ Use a two-channel oscilloscope or logic analyzer to capture at least two consecu
 
 | Test | Expected Pattern (one-hot) |
 |---|---|
-| QA (pin 15) vs QB (pin 1) | HIGH pulses are non-overlapping, separated by one clock period |
-| QB (pin 1) vs QC (pin 10) | Non-overlapping, sequential |
+| QA (pin 12) vs QB (pin 11) | HIGH pulses are non-overlapping, separated by one clock period |
+| QB (pin 11) vs QC (pin 10) | Non-overlapping, sequential |
 | QC (pin 10) vs QD (pin 9) | Non-overlapping, sequential |
 | Full cycle (QA → QB → QC → QD) | Exactly one output HIGH at any instant; period = 4 × clock period |
 
-> The 74LS194 requires a valid logic-level clock. The NE555 output directly drives pin 11. If the outputs do not advance, verify the clock reaches pin 11 with a scope (it may be shorted to ground or disconnected by a cold solder joint).
+> The 74LS194 requires a valid logic-level clock. The NE555 output directly drives pin 15. If the outputs do not advance, verify the clock reaches pin 15 with a scope (it may be shorted to ground or disconnected by a cold solder joint).
 
 ### 6.3 Direction Control Test
 
-1. Locate the DIR jumper or switch controlling the S0/S1 mode pins of **U2**.
+1. Locate the DIR jumper or switch controlling the S0/S1 mode pins of **U4**.
 2. Toggle the direction while observing the output sequence.
 
 | DIR Setting | S0 | S1 | Mode | Expected Sequence |
@@ -197,20 +197,20 @@ Use a two-channel oscilloscope or logic analyzer to capture at least two consecu
 
 **Power: `VCC` + `VMOT` at 5 V. Motor disconnected.**
 
-The **7407** (U3) is a hex open-collector non-inverting buffer. Each 74LS194 output drives one 7407 input, and each 7407 output pulls down the corresponding **TIP120** base resistor network.
+The **7407** (U2) is a hex open-collector non-inverting buffer. Each 74LS194 output drives one 7407 input, and each 7407 output pulls down the corresponding **TIP120** base resistor network.
 
 ### 7.1 Input-Output Correspondence
 
 | 74LS194 Output | 7407 Input Pin | 7407 Output Pin | Drives |
 |---|---|---|---|
-| QA (pin 15) | **U3** pin 1 | **U3** pin 2 | **Q1** base |
-| QB (pin 1) | **U3** pin 3 | **U3** pin 4 | **Q2** base |
-| QC (pin 10) | **U3** pin 5 | **U3** pin 6 | **Q3** base |
-| QD (pin 9) | **U3** pin 9 | **U3** pin 8 | **Q4** base |
+| QA (pin 12) | **U2** pin 1 | **U2** pin 2 | **Q1** base |
+| QB (pin 11) | **U2** pin 3 | **U2** pin 4 | **Q2** base |
+| QC (pin 10) | **U2** pin 5 | **U2** pin 6 | **Q3** base |
+| QD (pin 9) | **U2** pin 9 | **U2** pin 8 | **Q4** base |
 
 ### 7.2 Open-Collector Behavior
 
-1. Connect an oscilloscope probe to a 7407 output pin (e.g., **U3** pin 2).
+1. Connect an oscilloscope probe to a 7407 output pin (e.g., **U2** pin 2).
 2. Connect the probe ground to `GND`.
 
 | Input (74LS194 output) | Expected 7407 Output |
@@ -316,13 +316,13 @@ Even without an inductive load, verify the flyback diode orientation:
 
 | Symptom | Likely Cause | Diagnostic Step |
 |---|---|---|
-| `VCC` current limit trips on power-up | Short between `VCC` and `GND`; reversed IC | Return to Stage 1.3; inspect **U1**–**U3** pin  orientation |
+| `VCC` current limit trips on power-up | Short between `VCC` and `GND`; reversed IC | Return to Stage 1.3; inspect **U1**, **U2**, **U4** pin orientation |
 | NE555 pin 3 stuck HIGH | RESET pin (pin 4) floating or tied LOW; C1 shorted | Measure pin 4 voltage (must be ≥ 0.7 Vcc); check C1 for short |
 | NE555 pin 3 stuck LOW | C1 open; R1/R2 open; OUTPUT pin shorted to GND | Check C1 continuity; measure R1/R2; inspect pin 3 for solder bridge |
-| 74LS194 outputs do not advance | Clock not reaching pin 11; S0/S1 both LOW (hold mode); **U2** defective | Scope pin 11; verify S0/S1 voltages; swap **U2** if socketed |
+| 74LS194 outputs do not advance | Clock not reaching pin 15; S0/S1 both LOW (hold mode); **U4** defective | Scope pin 15; verify S0/S1 voltages; swap **U4** if socketed |
 | All 74LS194 outputs HIGH simultaneously | S0 = S1 = HIGH (parallel load) with all data inputs HIGH | Check DIR jumper; verify S0/S1 are not both tied HIGH |
 | 7407 output always LOW | Output transistor shorted; pull-up resistor missing | DMM diode test between output and GND; check base resistor network |
-| 7407 output always floating | Input not driven; **U3** defective; Vcc missing on **U3** | Measure **U3** pin 14 voltage; check input from 74LS194 |
+| 7407 output always floating | Input not driven; **U2** defective; Vcc missing on **U2** | Measure **U2** pin 14 voltage; check input from 74LS194 |
 | One motor channel does not fire | Corresponding **TIP120** defective; base resistor open; flyback diode shorted | DMM transistor test on **TIP120**; check base resistor; verify diode orientation |
 | Motor vibrates but does not rotate | Winding order incorrect; two windings swapped; insufficient VMOT | Recheck motor lead wiring; verify one-hot sequence reaches outputs; increase VMOT |
 | Motor runs hot / stalling | VMOT too high; current limit too high; missing flyback diode | Reduce VMOT; verify current limit; check D1–D4 presence and orientation |
